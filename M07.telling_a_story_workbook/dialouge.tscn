@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6w50u4y0wscf"]
+[gd_scene load_steps=6 format=3 uid="uid://b6w50u4y0wscf"]
 
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="1_31vge"]
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="1_hgtjj"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="2_w3fx8"]
+[ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="4_w3fx8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_31vge"]
 shader = ExtResource("1_hgtjj")
@@ -30,14 +31,58 @@ grow_vertical = 2
 
 [node name="Body" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -3.0
 offset_top = 314.0
-offset_right = -1267.0
+offset_right = -307.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_31vge")
 expand_mode = 1
+
+[node name="Expression" type="TextureRect" parent="Body"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = 61.0
+offset_right = -57.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_w3fx8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 43.0
+offset_top = 391.0
+offset_right = -310.0
+offset_bottom = -596.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hello World!"
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.98600006
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -37.880127
+offset_right = -30.0
+offset_bottom = -21.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Next"
