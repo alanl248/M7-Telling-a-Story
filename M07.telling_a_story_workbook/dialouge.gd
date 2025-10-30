@@ -4,9 +4,9 @@ extends Control
 @onready var next_button: Button =  %NextButton
 
 var dialogue_items :Array[String] = [
-	"I wub you daddy",
-	"I weally weally miss you",
-	"see you",
+	"Stop taking my chips",
+	"But but I'm just a behbee",
+	"Sayonara!UwU",
 ]
 
 var current_item_index := 0
