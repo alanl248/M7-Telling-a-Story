@@ -24,7 +24,16 @@ grow_vertical = 2
 theme = ExtResource("1_um10f")
 script = ExtResource("2_gocnh")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_31vge")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background2" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_31vge")
 layout_mode = 1
 anchors_preset = 15
@@ -61,37 +70,3 @@ grow_vertical = 2
 texture = ExtResource("4_w3fx8")
 expand_mode = 1
 stretch_mode = 5
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 43.0
-offset_top = 391.0
-offset_right = -310.0
-offset_bottom = -626.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "  Hello World!"
-fit_content = true
-
-[node name="NextButton" type="Button" parent="."]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.0
-anchor_top = 0.98600006
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -75.0
-offset_top = -37.880127
-offset_right = -30.0
-offset_bottom = -21.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Next"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
