@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dntaj8kgiqs0e" path="res://expressions.gd" id="2_hoxps"]
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="3_3lcr7"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="4_ofruo"]
-[ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="5_mgwxf"]
+[ext_resource type="Texture2D" uid="uid://vb24hfgkeyti" path="res://assets/pink.png" id="5_0360b"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="6_d0dyi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0360b"]
@@ -41,7 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_mgwxf")
+texture = ExtResource("5_0360b")
 expand_mode = 1
 stretch_mode = 5
 
@@ -69,33 +69,10 @@ offset_right = 534.0
 offset_bottom = 220.0
 metadata/_edit_group_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="ButtonSophia" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="RowBodies" type="HBoxContainer" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Sophia"
 
-[node name="ButtonPink" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="RowExpressions" type="HBoxContainer" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Pink"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="ButtonRegular" type="Button" parent="VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Regular"
-
-[node name="ButtonSad" type="Button" parent="VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Sad"
-
-[node name="ButtonHappy" type="Button" parent="VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Happy"
