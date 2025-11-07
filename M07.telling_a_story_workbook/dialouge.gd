@@ -1,16 +1,33 @@
 extends Control
 
-var dialogue_items: Array[String] = [
-	"Herro, class",
-	"I want eggrolls",
-	"who here has eggrolls?",
-	
+var expressions :={
+"happy":preload("res://assets/emotion_happy.png"),
+"regular":preload("res://assets/emotion_regular.png"),
+"sad":preload("res://assets/emotion_sad.png"),
+}
+var dialogue_items: Array[Dictionary] = [
+	{
+	"expression":expressions["regular"],
+	"text": "Herro, class",
+	},
+	{
+	"expression":expressions["sad"],
+	"text":"I want eggrolls",
+	},
+	{
+	"expression":expressions["happy"],
+	"text":"ahh, senpai binkowski has more eggrolls",
+	}
 ]
+
 var current_item_index := 0
 
 @onready var rich_text_label: RichTextLabel = %RichTextLabel
 @onready var next_button: Button = %NextButton
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
+@onready var body: TextureRect = %Body
+@onready var expression: TextureRect = %Expression
+
 
 
 func _ready() -> void:
@@ -20,7 +37,8 @@ func _ready() -> void:
 ## Draws the current text to the rich text element
 func show_text() -> void:
 	var current_item := dialogue_items[current_item_index]
-	rich_text_label.text = current_item
+	rich_text_label.text = current_item["text"]
+	expression.texture = current_item["expression"]
 	rich_text_label.visible_ratio = 0.0
 	var tween := create_tween()
 	var text_appearing_duration := 1.2
