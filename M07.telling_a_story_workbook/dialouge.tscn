@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6w50u4y0wscf"]
+[gd_scene load_steps=9 format=3 uid="uid://b6w50u4y0wscf"]
 
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="1_31vge"]
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="1_hgtjj"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://djtfo8sjsveml" path="res://dialouge.gd" id="2_gocnh"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="2_w3fx8"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="4_w3fx8"]
+[ext_resource type="AudioStream" uid="uid://bm2mvov4dm0aw" path="res://assets/talking_synth_alternate.ogg" id="7_76goi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_31vge"]
 shader = ExtResource("1_hgtjj")
@@ -80,6 +81,7 @@ text = "Next"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
+stream = ExtResource("7_76goi")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
@@ -94,3 +96,4 @@ offset_right = -84.0
 offset_bottom = -567.0
 grow_horizontal = 2
 text = "hello"
+fit_content = true
