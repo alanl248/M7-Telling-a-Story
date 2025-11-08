@@ -14,43 +14,43 @@ var bodies := {
 
 var dialogue_items: Array[Dictionary] = [
 	{
-		"expression": expressions["regular"],
-		"text": "I've been studying arrays and dictionaries lately.",
+		"expression": expressions["happy"],
+		"text": "BUT BABBYYYBAAABBBEEE",
 		"character": bodies["sophia"],
 	},
 	{
-		"expression": expressions["regular"],
-		"text": "Oh, nice. How has it been going?",
+		"expression": expressions["happy"],
+		"text": "BUT BABBYYY",
 		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["sad"],
-		"text": "Well... it's a little complicated!",
+		"text": "I need help with this math problem, and I don't know what to do",
 		"character": bodies["sophia"],
 	},
 	{
-		"expression": expressions["sad"],
+		"expression": expressions["regular"],
 		"text": "Oh!",
 		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["regular"],
-		"text": "It sure takes time to click at first.",
-		"character": bodies["pink"],
-	},
-	{
-		"expression": expressions["happy"],
-		"text": "If you keep at it, eventually, you'll get the hang of it!",
-		"character": bodies["pink"],
-	},
-	{
-		"expression": expressions["regular"],
-		"text": "Mhhh... I see. I'll keep at it, then.",
+		"text": "Yeah, What is 68 plus and minus of 1",
 		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["happy"],
-		"text": "Thanks for the encouragement. Time to LEARN!!!",
+		"text": "uuuhhhh, I think it's 67 and 69?",
+		"character": bodies["pink"],
+	},
+	{
+		"expression": expressions["regular"],
+		"text": "Mhhh...6 7",
+		"character": bodies["sophia"],
+	},
+	{
+		"expression": expressions["happy"],
+		"text": "ADVANCEDDDD! EAGLE EYES",
 		"character": bodies["sophia"],
 	},
 ]
@@ -89,6 +89,11 @@ func show_text() -> void:
 	tween.finished.connect(audio_stream_player.stop)
 
 	slide_in()
+	
+	next_button.disabled = true
+	tween.finished.connect(func() -> void:
+		next_button.disabled = false
+	)
 
 
 func advance() -> void:
